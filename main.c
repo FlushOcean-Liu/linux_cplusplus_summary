@@ -18,10 +18,14 @@ int main()
 		scanf("%d",&a[i]);
 	}
 
-
+	printf("the quick sort is :\n");
 	quick_sort(a,0, n-1);
-	
 	print(a, n);
-	printf("\n");
+	printf("\n\n");
+
+	//insert_sort(a, n);
+	
+	
+	
 }
 

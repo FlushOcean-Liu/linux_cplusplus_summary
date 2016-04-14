@@ -6,6 +6,8 @@ void quick_sort(int a[], int low, int high);
 
 void print(int a[],int n);
 
+void insert_sort(int a[], int len);
+
 
 #endif
 

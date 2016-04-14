@@ -43,4 +43,28 @@ void quick_sort(int a[], int low, int high)
 
 
 
+void insert_sort(int a[], int len)
+{
+	int i;
+	for(i=0; i<len; i++)
+	{
+		int temp = a[i];
+		int j=i;
+		while(j>0 && a[j-1] > temp)
+		{
+			a[j]=a[j-1];
+			j--;
+		}
+		a[j]=temp;
+	}
+}
+
+
+
+
+
+
+
+
+
 
