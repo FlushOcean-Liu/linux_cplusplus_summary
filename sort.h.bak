@@ -8,8 +8,6 @@ void print(int a[],int n);
 
 void insert_sort(int a[], int len);
 
-void buble_sort(int a[], int len);
-
 
 #endif
 

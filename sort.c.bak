@@ -1,4 +1,6 @@
 
+
+
 void print(int a[], int len)
 {
 	int i;
@@ -10,6 +12,9 @@ void print(int a[], int len)
 	}
 	printf("\n****************************\n");
 }
+
+
+
 
 static int partition(int a[], int low, int high)
 {
@@ -39,6 +44,9 @@ void quick_sort(int a[], int low, int high)
 	}
 }
 
+
+
+
 void insert_sort(int a[], int len)
 {
 	int i;
@@ -54,6 +62,7 @@ void insert_sort(int a[], int len)
 		a[j]=temp;
 	}
 }
+
 
 void buble_sort(int a[], int len)
 {

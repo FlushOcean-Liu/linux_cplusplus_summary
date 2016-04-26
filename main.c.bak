@@ -48,10 +48,14 @@ int main()
 				return 1;
 			default:
 				return -1;
-  	}
+//		}
 		print(a, n);
 
-//	}
+	}
+	
+	
+	
+	
 	return 0;
 	
 }
