@@ -2,20 +2,16 @@
 void print(int a[], int len)
 {
 	int i;
-  printf("\n****************************\n");
 	printf("the reasult is:");
-	for(i=0; i<len; i++)
-	{
+	for(i=0; i<len; i++){
 		printf("%d ", a[i]);
 	}
-	printf("\n****************************\n");
 }
 
 static int partition(int a[], int low, int high)
 {
 	int pivot = a[low];
-	while(low < high)
-	{
+	while(low < high){
 		while( (low < high) && (a[high] > pivot)) 
 			high--;
 		a[low] = a[high];
@@ -31,8 +27,7 @@ static int partition(int a[], int low, int high)
 void quick_sort(int a[], int low, int high)
 {
 	int loc = 0;
-	if(low < high)
-	{
+	if(low < high){
 		loc =  partition(a, low, high);
 		quick_sort(a, low, loc-1);
 		quick_sort(a, loc+1, high);
@@ -42,12 +37,10 @@ void quick_sort(int a[], int low, int high)
 void insert_sort(int a[], int len)
 {
 	int i;
-	for(i=0; i<len; i++)
-	{
+	for(i=0; i<len; i++){
 		int temp = a[i];
 		int j=i;
-		while(j>0 && a[j-1] > temp)
-		{
+		while(j>0 && a[j-1] > temp){
 			a[j]=a[j-1];
 			j--;
 		}
@@ -58,12 +51,9 @@ void insert_sort(int a[], int len)
 void buble_sort(int a[], int len)
 {
 	int i,j,k;
-	for(j=0;j<len;j++)
-	{
-		for(i=0;i<len-j-1;i++)
-		{
-			if(a[i]>a[i+1])
-			{
+	for(j=0;j<len;j++){
+		for(i=0;i<len-j-1;i++){
+			if(a[i]>a[i+1]){
 				k=a[i];
 				a[i]=a[i+1];
 				a[i+1]=k;		
