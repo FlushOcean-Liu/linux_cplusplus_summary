@@ -48,6 +48,8 @@ void insert_sort(int a[], int len)
 	}
 }
 
+
+/* buble sort*/
 void buble_sort(int a[], int len)
 {
 	int i,j,k;
