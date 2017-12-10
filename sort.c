@@ -2,7 +2,7 @@
 void print(int a[], int len)
 {
 	int i;
-	printf("the reasult is:");
+	printf("the resualt is:");
 	for(i=0; i<len; i++){
 		printf("%d ", a[i]);
 	}
