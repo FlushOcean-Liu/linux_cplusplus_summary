@@ -23,30 +23,28 @@ int main()
 	a=(int *)malloc(sizeof(int)*n);
 
 	printf("Please input the data:\n");
-	for(i=0; i<n; i++)
-	{
+	for(i=0; i<n; i++){
 		scanf("%d",&a[i]);
 	}
 	
-		main_print();
-		scanf("%d",&num);
-		switch(num)
-		{
-			case 1:
-				quick_sort(a,0, n-1);
-				break;
-			case 2:
-				insert_sort(a, n);
-			  break;
-			case 3:
-				buble_sort(a, n);
-				break;
-			case 0:
-				return 1;
-			default:
-				return -1;
-  	}
-		print(a, n);
+  main_print();
+  scanf("%d",&num);
+	switch(num){
+     case 1:
+        quick_sort(a,0, n-1);
+        break;
+     case 2:
+        insert_sort(a, n);
+        break;
+     case 3:
+        buble_sort(a, n);
+        break;
+     case 0:
+        return 1;
+     default:
+        return -1;
+  }
+  print(a, n);
 
 	return 0;
 	
