@@ -28,6 +28,9 @@ int main()
 		scanf("%d",&a[i]);
 	}
 	
+//	while(1)
+//	{
+		
 		main_print();
 		scanf("%d",&num);
 		switch(num)
@@ -48,6 +51,7 @@ int main()
   	}
 		print(a, n);
 
+//	}
 	return 0;
 	
 }
