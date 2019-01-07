@@ -10,6 +10,7 @@ void insert_sort(int a[], int len);
 
 void buble_sort(int a[], int len);
 
+void shell_sort(int a[], int len);
 
 #endif
 

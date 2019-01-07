@@ -56,10 +56,10 @@
 ##==========================================================================
 
 # The pre-processor and compiler options.
-MY_CFLAGS =
+MY_CFLAGS = -lm
 
 # The linker options.
-MY_LIBS   = -lapue
+MY_LIBS   =
 
 # The pre-processor options used by the cpp (man cpp for more).
 CPPFLAGS  = -Wall
@@ -235,7 +235,7 @@ endif
 endif
 
 clean:
-	$(RM) $(OBJS) $(PROGRAM) $(PROGRAM).exe
+	$(RM) $(OBJS) $(PROGRAM) $(PROGRAM).exe *.d
 
 distclean: clean
 	$(RM) $(DEPS) TAGS

@@ -1,12 +1,13 @@
-
+#include <math.h>
+#include <stdio.h>
 /* 打印数组内容 */
 void print(int a[], int len)
 {
 	int i;
-	printf("the result is:");
 	for(i=0; i<len; i++){
 		printf("%d ", a[i]);
 	}
+	printf("\n");
 }
 
 static int partition(int a[], int low, int high)
@@ -67,6 +68,35 @@ void buble_sort(int a[], int len)
 		}
 	}
 }
+
+
+void shell_sort(int a[], int len)
+{
+	int temp,gap = 1;
+	int i,j;
+	
+	while(gap < len / 3){
+		gap = gap * 3 + 1;
+	}
+	
+	for(; gap > 0; gap = floor(gap / 3)){
+		for(i = gap; i < len; i++){
+			temp = a[i];
+			for(j = i-gap; j>0 && a[j] > temp; j-=gap){
+				a[j + gap] = a[j];
+			}
+			a[j + gap] = temp;
+		}
+	}
+			
+	return ;		
+}
+
+
+
+
+
+
 
 
 
