@@ -1,4 +1,5 @@
 
+/* 打印数组内容 */
 void print(int a[], int len)
 {
 	int i;
@@ -24,6 +25,7 @@ static int partition(int a[], int low, int high)
 	return low;
 }
 
+/* 快速排序算法 */
 void quick_sort(int a[], int low, int high)
 {
 	int loc = 0;
@@ -34,6 +36,8 @@ void quick_sort(int a[], int low, int high)
 	}
 }
 
+
+/* 插入排序算法 */
 void insert_sort(int a[], int len)
 {
 	int i;
@@ -49,7 +53,7 @@ void insert_sort(int a[], int len)
 }
 
 
-/* buble sort*/
+/* 冒泡排序算法 buble sort*/
 void buble_sort(int a[], int len)
 {
 	int i,j,k;

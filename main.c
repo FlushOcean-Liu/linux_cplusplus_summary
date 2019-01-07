@@ -45,6 +45,9 @@ int main()
 			return -1;
 	}
 	print(a, n);
+	
+	if(a)
+		free(q);
 
 	return 0;
 	
