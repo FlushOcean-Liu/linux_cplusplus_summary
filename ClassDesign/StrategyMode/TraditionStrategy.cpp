@@ -5,50 +5,50 @@ using namespace std;
 class Hurt
 {
 public:
-	virtual void blood()=0;
+    virtual void blood()=0;
 };
 
 class AdcHurt:public Hurt
 {
 public:
-	void blood() override
-	{
-		cout<<"Adc Hurt, Blood loss"<<endl;
-	}
+    void blood() override
+    {
+        cout<<"Adc Hurt, Blood loss"<<endl;
+    }
 };
 
 class ApcHurt:public Hurt
 {
 public:
-	void blood() override
-	{
-		cout<<"Apc Hurt, Blood loss"<<endl;
-	}
+    void blood() override
+    {
+        cout<<"Apc Hurt, Blood loss"<<endl;
+    }
 };
 
 
 class Soldier
 {
 public:
-	Soldier(Hurt* hurt):m_pHurt(hurt)
-	{
-	}
-	
-	void attack()
-	{
-		m_pHurt->blood();	
-	}
+    Soldier(Hurt* hurt):m_pHurt(hurt)
+    {
+    }
+    
+    void attack()
+    {
+        m_pHurt->blood();    
+    }
 
 private:
-	Hurt* m_pHurt;
+    Hurt* m_pHurt;
 };
 
 /*¶¨Òå²ßÂÔ±êÇ©*/
 typedef enum
 {
-	Hurt_Type_Adc,
-	Hurt_Type_Apc,
-	Hurt_Type_Num
+    Hurt_Type_Adc,
+    Hurt_Type_Apc,
+    Hurt_Type_Num
 }HurtType;
 
 
@@ -56,56 +56,60 @@ typedef enum
 class Mage
 {
 public:
-	Mage(HurtType type)
-	{
-		switch(type){
-		case Hurt_Type_Adc:
-			m_pHurt=new AdcHurt();
-			break;
-		case Hurt_Type_Apc:
-			m_pHurt=new ApcHurt();
-			break;
-		default:
-			break;
-		}
-	}
-	
-	~Mage()
-	{
-		delete m_pHurt;
-		m_pHurt=nullptr;
-		cout<<"~Mage()"<<endl;
-	}
-	
-	void attach()
-	{
-		m_pHurt->blood();
-	}
+    Mage(HurtType type)
+    {
+        switch(type){
+        case Hurt_Type_Adc:
+            m_pHurt=new AdcHurt();
+            break;
+        case Hurt_Type_Apc:
+            m_pHurt=new ApcHurt();
+            break;
+        default:
+            break;
+        }
+    }
+    
+    ~Mage()
+    {
+        delete m_pHurt;
+        m_pHurt=nullptr;
+        cout<<"~Mage()"<<endl;
+    }
+    
+    void attach()
+    {
+        m_pHurt->blood();
+    }
 
 private:
-	Hurt* m_pHurt;	
-	
+    Hurt* m_pHurt;    
+    
 };
 
 template<typename T>
 class Archer
 {
 public:
-	void attack()
-	{
-		m_hurt.blood();
-	}
+    void attack()
+    {
+        m_hurt.blood();
+    }
 private:
-	T m_hurt;
+    T m_hurt;
 };
 
 int main()
 {
-	Archer<ApcHurt>* arc=new Archer<ApcHurt>;
-	arc->attack();
-	
-	delete arc;
-	arc=nullptr;
-	
-	return 0;
+    Archer<ApcHurt>* arc=new Archer<ApcHurt>;
+    arc->attack();
+    
+    delete arc;
+    arc=nullptr;
+    
+    return 0;
 }
+
+
+
+
