@@ -49,6 +49,7 @@ void Display(list<Type>& vr)
     cout << endl;
 }
 
+
 void DisplayByFor(list<int>& mylist)
 {
     for(auto &x:mylist)

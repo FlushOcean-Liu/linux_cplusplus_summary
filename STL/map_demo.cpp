@@ -6,7 +6,7 @@ using namespace std;
 
 void show(map<char, string> Map)
 {
-    cout<<"´òÓ¡Map"<<endl;
+    cout<<"Map element:"<<endl;
     for(auto i:Map){
         cout<<i.first<<":"<<i.second<<" ";
     }
@@ -16,7 +16,7 @@ void show(map<char, string> Map)
 
 void show1(map<char,string> Map)
 {
-    cout<<"´òÓ¡Map\n";
+    cout<<"iterator map:\n";
     for(auto it=Map.cbegin();it!=Map.cend();++it){
         cout<<it->first<<":"<<it->second<<" ";
     }
