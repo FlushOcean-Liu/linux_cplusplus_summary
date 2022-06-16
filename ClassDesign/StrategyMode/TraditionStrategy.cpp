@@ -43,7 +43,7 @@ private:
     Hurt* m_pHurt;
 };
 
-/*¶¨Òå²ßÂÔ±êÇ©*/
+
 typedef enum
 {
     Hurt_Type_Adc,
@@ -52,7 +52,6 @@ typedef enum
 }HurtType;
 
 
-/* »·¾³½ÇÉ«Àà£¬ ÓÎÏ·½ÇÉ«·¨Ê¦£¬´«ÈëÒ»¸ö²ßÂÔ±êÇ©²ÎÊý*/
 class Mage
 {
 public:
@@ -109,7 +108,6 @@ int main()
     
     return 0;
 }
-
 
 
 
