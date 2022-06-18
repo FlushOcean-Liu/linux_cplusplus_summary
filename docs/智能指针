@@ -1,0 +1,9 @@
+## 1.什么是智能指针
+
+c++中定义4种智能指针：
+* auto_ptr(c++已经摒弃，c++17移除)
+* unique_ptr
+* shared_ptr
+* weak_ptr
+
+
