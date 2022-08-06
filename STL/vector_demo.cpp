@@ -38,6 +38,7 @@ int test_vector_int(void)
     }
     cout<<endl;
 
+
     /* 使用auto遍历容器元素 */ 
     cout<<"[5]use auto print element:";
     for(auto ch:v_int) {    
